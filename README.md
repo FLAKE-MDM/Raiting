@@ -1,1 +1,1 @@
-# Raiting
+# https://flake-mdm.github.io/Raiting/
