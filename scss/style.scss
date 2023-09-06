@@ -158,12 +158,6 @@ body{
 }
 
 .grid{
-    &_xl{
-        @include bp(xl-up){
-            grid-gap: 4rem;
-        }
-    }
-
     &-md-2{
         @include bp(md-up){
             display: grid;
@@ -179,6 +173,12 @@ body{
                 grid-gap: 2.4rem;
                 grid-template-columns: repeat(3, 1fr);
             }
+        }
+    }
+
+    &_xl{
+        @include bp(xl-up){
+            grid-gap: 4rem;
         }
     }
 }
