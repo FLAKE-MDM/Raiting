@@ -1,0 +1,223 @@
+// collapse
+.collapse:not(.show) {
+  display: none;
+}
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .collapsing {
+    transition: none;
+  }
+}
+.tab-content>.tab-pane {
+  display: none;
+}
+.tab-content>.active {
+  display: block;
+}
+.fade {
+  transition: opacity .15s linear;
+}
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1055;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+  &__close{
+    position: absolute;
+    top: 2.4rem;
+    right: 2.4rem;
+    border: none;
+    transition: all 0.3s ease-out;
+    background: none;
+    &:hover{opacity: 0.5;}
+    @include bp(sm){
+      &.icon-close{
+        width: 1.6rem;
+        height: 1.6rem;
+        background-image: url(../img/icons/close-black.svg);
+        top: 1.6rem;
+        right: 2.3rem;
+      }
+    }
+  }
+}
+.modal-dialog {
+  position: relative;
+  pointer-events: none;
+  @include bp(md-up){
+    width: 57.6rem;
+    margin: 5rem auto;
+  }
+  @include bp(lg-up){
+    width: 82rem;
+    margin: 10rem auto;
+  }
+}
+.modal.fade .modal-dialog {
+  transition: transform .3s ease-out;
+  transform: translate(0,-50px);
+}
+.modal.show .modal-dialog {
+  transform: none;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+}
+.modal-backdrop.fade {
+  opacity: 0;
+}
+.modal-backdrop.show {
+  opacity: 0.3;
+}
+.modal-content{
+  flex-grow: 1;
+  pointer-events: auto;
+  background: #fff;
+  padding: 2rem;
+  @include bp(md){
+
+  }
+  @include bp(sm){
+
+  }
+}
+
+
+// dropdown
+.dropdown{
+  position: relative;
+}
+.dropdown-menu{
+  position: absolute;
+  z-index: 1000;
+  display: none;
+  min-width: 100%;
+  margin: 1.5rem 0 0;
+  background: #FFFFFF;
+  filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.25));
+  border-radius: 1rem;
+  padding: 1.7rem 2.5rem;
+  left: 0;
+  top: 100%;
+
+  &_nav{
+    min-width: 20rem;
+    padding: 3.2rem 1.8rem 0.5rem;
+    margin: 1.3rem 0 0 -0.5rem;
+
+    @include bp(md){
+      position: static;
+      padding: 1rem 1rem 0;
+      margin: 0;
+      filter: none;
+      border-radius: 0;
+    }
+  }
+}
+.open>.dropdown-menu {
+  display: block;
+}
+.dropdown-toggle{
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: 0 2rem 0 0;
+  position: relative;
+  padding-right: 2.2rem;
+
+  &::after{
+    content: "";
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.3rem;
+    top: 0;
+    right: -0.2rem;
+    background: url(../img/icons/caret-nav.svg) no-repeat;
+    background-size: contain;
+    transition: all 0.3s ease-out;
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+  }
+  // &::before{
+  //   background: url(../img/icons/caret-primary.svg) no-repeat;
+  //   background-size: contain;
+  //   opacity: 0;
+  // }
+  // &:hover{
+  //   &::after{
+  //     opacity: 0;
+  //   }
+  //   &::before{
+  //     opacity: 1;
+  //   }
+  // }
+  .open>&{
+    &::after{
+      transform: rotate(180deg);
+    }
+  }
+
+  &_clear{
+    padding: 0;
+
+    &:after{
+        display: none;
+    }
+  }
+}
+
+.tooltip{
+  border: 1px solid #E0E0E0;
+  filter: none;
+  box-shadow: 0px 4px 22px 0px rgba(0, 0, 0, 0.15);
+  padding: 2.5rem 4.3rem 2.5rem 2.5rem;
+  min-width: 51.4rem;
+  padding: 2.4rem 4.3rem 3rem 2.4rem;
+  line-height: 143% !important;
+
+  @include bp(md){
+    min-width: 42rem;
+  }
+
+  @include bp(sm){
+    min-width: 30rem;
+    padding: 2.5rem 4.3rem 2.5rem 2.5rem;
+    padding: 1.5rem 3rem 1.5rem 1.5rem;
+  }
+
+  &__close{
+    position: absolute;
+    top: 2.4rem;
+    right: 2.4rem;
+    transition: all 0.3s ease-out;
+
+    @include bp(sm){
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+
+    @include bp(hv){
+      &:hover{
+        opacity: 0.7;
+        cursor: pointer;
+      }
+    }
+  }
+}

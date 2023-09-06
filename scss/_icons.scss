@@ -1,0 +1,135 @@
+.icon{
+    background-repeat: no-repeat;
+    background-size: contain!important;
+    background-position: 0 0;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.icon-info{
+    width: 2rem;
+    height: 2rem;
+    background-image: url(../img/icons/info.svg);
+}
+.icon-close{
+    width: 1.3rem;
+    height: 1.3rem;
+    background-image: url(../img/icons/close.svg);
+}
+.icon-copy{
+    width: 1.8rem;
+    height: 1.8rem;
+    background-image: url(../img/icons/copy.svg);
+}
+.icon-check{
+    width: 1.5rem;
+    height: 1.3rem;
+    background-image: url(../img/icons/check.svg);
+}
+.icon-star{
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 0.8rem;
+    background-image: url(../img/icons/star.svg);
+}
+.icon-caret-up-inversion{
+    width: 1.4rem;
+    height:1.4rem;
+    background-image: url(../img/icons/caret-up-inversion.svg);
+}
+.icon-caret-down-inversion{
+    width: 1.7rem;
+    height: 1.1rem;
+    background-image: url(../img/icons/caret-down-inversion.svg);
+}
+.icon-quote{
+    width: 3.2rem;
+    height: 3.2rem;
+    background-image: url(../img/icons/quote.svg);
+}
+.icon-book{
+    width: 4.4rem;
+    height: 4.4rem;
+    background-image: url(../img/icons/book.svg);
+}
+.icon-facebook{
+    width: 3.2rem;
+    height: 3.2rem;
+    background-image: url(../img/icons/facebook.svg);
+}
+.icon-instagram{
+    width: 3.2rem;
+    height: 3.2rem;
+    background-image: url(../img/icons/instagram.svg);
+}
+.icon-linkedin{
+    width: 3.2rem;
+    height: 3.2rem;
+    background-image: url(../img/icons/linkedin.svg);
+}
+.icon-reddit{
+    width: 3.2rem;
+    height: 3.2rem;
+    background-image: url(../img/icons/reddit.svg);
+}
+.icon-{
+    width: rem;
+    height: rem;
+    background-image: url(../img/icons/.svg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.icon-{
+    width: rem;
+    height: rem;
+    background-image: url(../img/icons/.svg);
+}
+.icon-{
+    width: rem;
+    height: rem;
+    position: relative;
+    @include bp(hv){
+        &:hover{
+            &:before{opacity: 0;}
+            &:after{opacity: 1;}
+        }
+    }
+    &:before, &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        transition: all 0.3s ease-out;
+    }
+    &:before{
+        background-image: url(../img/icons/.svg);
+    }
+    &:after{
+        opacity: 0;
+        background-image: url(../img/icons/.svg);
+    }
+}
+a:hover>.icon-,  .active>.icon-{
+    &:before{opacity: 0;}
+    &:after{opacity: 1;}
+}

@@ -1,0 +1,318 @@
+a{
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+    color: $black;
+
+    @include bp(hv){
+        &:hover{
+            color: $primary;
+        }
+
+        &.text_primary{
+            &:hover{
+                color: darken($color: $primary, $amount: 10);
+            }
+        }
+    }
+}
+.link_underline{
+    text-decoration: underline;
+
+    @include bp(hv){
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+p{
+    margin-bottom: 2rem;
+}
+
+.pb{
+    // &-0{
+    //     padding-bottom: 0!important;
+    // }
+
+    &-xs{
+        padding-bottom: 0.5rem;
+    }
+
+    // &-sm{
+    //     padding-bottom: 1rem;
+    // }
+
+    // &-md{
+    //     padding-bottom: 1.9rem;
+    // }
+}
+
+.pt{
+    // &-0{
+    //     padding-bottom: 0!important;
+    // }
+
+    &-xs{
+        padding-top: 0.5rem;
+    }
+
+    // &-sm{
+    //     padding-bottom: 1rem;
+    // }
+
+    // &-md{
+    //     padding-bottom: 1.9rem;
+    // }
+}
+
+.m-0{
+    margin: 0!important;
+}
+
+.mt{
+    &-0{
+        margin-top: 0!important;
+    }
+
+    &-md{
+        margin-top: 3.1rem;
+
+        @include bp(sm){
+            margin-top: 1.5rem;
+        }
+    }
+
+    &-lg{
+        margin-top: 4rem;
+
+        @include bp(sm){
+            margin-top: 2rem;
+        }
+    }
+
+    &-xl{
+        margin-top: 5.9rem;
+
+        @include bp(sm){
+            margin-top: 4rem;
+        }
+    }
+
+    &-xxl{
+        margin-top: 6.9rem;
+
+        @include bp(sm){
+            margin-top: 5rem;
+        }
+    }
+}
+
+.mb{
+    &-0{
+        margin-bottom: 0!important;
+    }
+
+    &-xs{
+        margin-bottom: 0.5rem;
+    }
+
+    &-sm{
+        margin-bottom: 1rem;
+    }
+
+    &-md{
+        margin-bottom: 1.9rem;
+    }
+
+    &-lg{
+        margin-bottom: 3.6rem;
+
+        @include bp(sm){
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.ms{
+    &-1{
+        margin-left: 1rem;
+    }
+
+    &-2{
+        margin-left: 2rem;
+    }
+}
+
+.me{
+    &-1{
+        margin-right: 1rem;
+    }
+
+    &-2{
+        margin-right: 2rem;
+    }
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: bold;
+    margin: 2rem 0;
+    line-height: 140%;
+}
+
+h1{
+    font-size: 3.8rem;
+
+    @include bp(md){
+        font-size: 3.2rem;
+    }
+
+    @include bp(sm){
+        font-size: 2.5rem;
+    }
+}
+
+h2{
+    font-size: 2.8rem;
+
+    @include bp(sm){
+        font-size: 2.2rem;
+    }
+}
+
+h3{
+    font-size: 2.4rem;
+
+    @include bp(sm){
+        font-size: 2rem;
+    }
+}
+
+h4{
+    font-size: 2rem;
+}
+
+h5{
+    font-size: 1.8rem;
+}
+
+h6{
+    font-size: 1.6rem;
+}
+
+.title{
+    font-weight: bold;
+    margin: 2rem 0;
+    line-height: 140%;
+
+    &_size{
+        &-xs{
+            font-size: 1.8rem;
+        }
+        &-sm{
+            font-size: 2rem;
+        }
+        &-md{
+            font-size: 2.4rem;
+
+            @include bp(sm){
+                font-size: 2rem;
+            }
+        }
+        &-lg{
+            font-size: 2.8rem;
+
+            @include bp(sm){
+                font-size: 2.2rem;
+            }
+        }
+        &-xl{
+            font-size: 3.8rem;
+
+            @include bp(md){
+                font-size: 3.2rem;
+            }
+
+            @include bp(sm){
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+}
+.text{
+    &_upper{
+        text-transform: uppercase;
+    }
+    // size
+    &_size{
+        &-xs{
+            font-size: 1.2rem;
+            line-height: 140%;
+        }
+        &-sm{
+            font-size: 1.4rem;
+            line-height: 140%;
+
+            @include bp(sm){
+                font-size: 1.2rem;
+            }
+        }
+        &-md{
+            font-size: 1.6rem;
+            line-height: 140%;
+
+            @include bp(sm){
+                font-size: 1.4rem;
+            }
+        }
+        &-lg{
+            font-size: 2rem;
+            line-height: 140%;
+
+            @include bp(sm){
+                font-size: 1.8rem;
+            }
+        }
+        &-xl{
+
+        }
+    }
+    // colors
+    &_primary{
+        color: $primary;
+    }
+
+    &_secondary{
+        color: $secondary;
+    }
+
+    &_inversion{
+        color: #fff;
+    }
+
+    // weight
+    &_normal{
+        font-weight: 400;
+    }
+    &_mediumbold{
+        font-weight: 500;
+    }
+    &_bold{
+        font-weight: 700;
+    }
+    // alignment
+    &_center{
+        text-align: center;
+        &_sm{
+            @include bp(sm){
+                text-align: center;
+            }
+        }
+    }
+    &_left{
+        text-align: left!important;
+    }
+    &_right{
+        text-align: right!important;
+    }
+}
+

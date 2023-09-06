@@ -1,0 +1,243 @@
+.header{
+    margin-bottom: 4.3rem;
+
+    &__content{
+        padding: 2.4rem 0;
+
+        @include bp(sm){
+            padding: 1rem 0;
+        }
+    }
+
+    &__info{
+
+    }
+
+    &__nav-list{
+        margin: 0.1rem 1rem 0 3.1rem;
+
+        .nav-list__item{
+            margin: 0 2rem;
+        }
+    }
+}
+
+.logo{
+    flex-shrink: 0;
+    margin: 0.7rem 0 0 0.3rem;
+    display: inline-flex;
+    align-self: flex-start;
+
+    &:hover{opacity: 0.7;}
+
+    @include bp(sm){
+        margin: 0;
+        width: 15rem;
+        align-self: center;
+    }
+}
+
+.present{
+    width: 4.4rem;
+    height: 4.4rem;
+    position: relative;
+    display: flex;
+
+    @include bp(md){
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-right: 2rem;
+    }
+
+    &:before{
+        content: '';
+        z-index: 1;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border: 2px solid $primary;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    &__dropdown{
+        min-width: 28.3rem;
+
+        @include bp(md){
+            left: auto;
+            right: 0;
+        }
+    }
+
+    &__counter{
+        position: absolute;
+        width: 1.3rem;
+        height: 1.3rem;
+        background: $primary;
+        color: #fff;
+        font-size: 9px;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 0;
+        right: 0;
+        border-radius: 50%;
+        z-index: 2;
+    }
+
+    img{
+        border-radius: 50%;
+    }
+
+    &-item{
+        display: flex;
+        margin-bottom: 1.2rem;
+
+        &:last-child{
+            margin-bottom: 0.9rem;
+        }
+
+        &__image {
+            margin-right: 1rem;
+            flex-shrink: 0;
+            align-self: flex-end;
+
+            img{
+                border-radius: 0.5rem;
+            }
+        }
+
+        &__title {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+        }
+    }
+}
+
+.language{
+    margin-top: 0.6rem;
+
+    .dropdown-menu{
+        transform: translateX(-25%);
+    }
+
+    &__icon{
+        width: 3.2rem;
+        display: block;
+    }
+}
+
+.nav{
+    @include bp(md){
+        transition: all 0.3s ease-out;
+        bottom: 0;
+        overflow: auto;
+        top: 9.2rem;
+        right: 0;
+        width: 100%;
+        transform: translateX(100%);
+        position: fixed;
+        background: #fff;
+        padding: 2rem 1rem;
+        border-top: 1px solid rgba($black, 0.2);
+        z-index: 99;
+
+        &.show{
+            transform: none;
+        }
+    }
+
+    &-list{
+        &__item{
+            margin: 0 1.83rem;
+
+            @include bp(lg){
+                margin: 0 1.7rem;
+            }
+
+            @include bp(md){
+                margin: 0 0 1rem;
+            }
+
+            &:first-of-type{
+                margin-left: 0;
+            }
+        }
+        &__link{
+            font-weight: bold;
+            display: inline-flex;
+            &.active{
+                color: $primary;
+            }
+            @include bp(hv){
+                &:hover{
+                    color: $primary;
+                }
+            }
+
+            @include bp(md){
+
+            }
+        }
+    }
+
+    &-sub-list{
+        &__item{
+            margin-bottom: 1.4rem;
+        }
+    }
+}
+
+.sub-list{
+    position: static;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border-radius: 0;
+    filter: none;
+    margin: 0.8rem 0 0 1.7rem;
+    width: auto;
+
+    &__item{
+        margin-bottom: 0.4rem;
+    }
+
+    &__link{
+        font-size: 1.4rem;
+    }
+}
+
+.btn-menu{
+    display: none;
+    border: none;
+    align-self: center;
+    background: none;
+    flex-shrink: 0;
+    margin-left: 2rem;
+
+    @include bp(md){
+        display: block;
+    }
+
+    &__item{
+        display: block;
+        width: 2rem;
+        height: 0.2rem;
+        border-top-style: 5px;
+        background: $primary;
+        transition: all 0.3s ease-out;
+    }
+
+    &__item+&__item{
+        margin-top: 0.5rem;
+    }
+
+    &:hover{
+        .btn-menu__item{
+
+        }
+    }
+}
