@@ -59,7 +59,7 @@ let nav = document.querySelector(".content-nav");
 for(let i = 0; i < titleArr.length; i++){
   titleArr[i].id = `title-${i}`;
 
-  nav.insertAdjacentHTML('afterBegin', `<li class="content-nav__item">
+  nav.insertAdjacentHTML('beforeend', `<li class="content-nav__item">
     <a href="#title-${i}" class="content-nav__link">${titleArr[i].textContent}</a>
   </li>`)
 
