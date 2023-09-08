@@ -64,6 +64,9 @@ body{
     display: block;
     max-width: 100%;
 }
+.img-rounded{
+    border-radius: 1rem;
+}
 .img-fill{
     width: 100%;
     height: 100%;
@@ -196,6 +199,24 @@ body{
 
         &-3{
             @include bp(lg-up){
+                display: grid;
+                grid-gap: 2.4rem;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+
+    &-xl{
+        &-2{
+            @include bp(xl-up){
+                display: grid;
+                grid-gap: 2.4rem;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        &-3{
+            @include bp(xl-up){
                 display: grid;
                 grid-gap: 2.4rem;
                 grid-template-columns: repeat(3, 1fr);
@@ -523,6 +544,7 @@ body{
 // aside
 .aside{
     color: #000;
+    position: relative;
 
     &-nav{
         &__item{
@@ -549,6 +571,15 @@ body{
     &__title{
         margin-bottom: 1.2rem;
     }
+}
+
+.fixed{
+    position: fixed;
+    top: 0;
+}
+
+.floating{
+    margin: 0;
 }
 
 .flag{
@@ -584,7 +615,6 @@ body{
         margin-bottom: 0.75rem;
     }
 }
-
 
 @import 'form';
 @import 'header';

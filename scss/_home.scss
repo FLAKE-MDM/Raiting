@@ -331,6 +331,12 @@
     justify-content: center;
     background: $light;
     border-radius: 0.5rem;
+
+    @include bp(hv){
+      &:hover{
+        background: darken($color: $light, $amount: 10);
+      }
+    }
   }
 }
 
@@ -619,6 +625,19 @@
 }
 
 // best
+.best-grid{
+  @include bp(xl-up){
+    display: grid;
+    grid-gap: 2.4rem;
+    grid-template-columns: repeat(3, 31.3%);
+  }
+
+  @include bp(xxl-up){
+    grid-gap: 4rem;
+    grid-template-columns: repeat(3, 30.5%);
+  }
+}
+
 .best-item{
   padding: 1.9rem 2.5rem 2.5rem;
   display: flex;
@@ -628,7 +647,7 @@
   background: $light;
   border-radius: 1rem;
 
-  @include bp(md){
+  @include bp(lg){
     margin-bottom: 2rem;
   }
 
