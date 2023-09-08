@@ -1,6 +1,10 @@
 .header{
     margin-bottom: 4.3rem;
 
+    @include bp(md){
+        margin-bottom: 1.5rem;
+    }
+
     &__content{
         padding: 2.4rem 0;
 
@@ -9,15 +13,13 @@
         }
     }
 
-    &__info{
-
-    }
-
     &__nav-list{
-        margin: 0.1rem 1rem 0 3.1rem;
+        margin: 0.1rem 3rem 0 3.1rem;
 
         .nav-list__item{
-            margin: 0 2rem;
+            &:not(:last-child){
+                margin-right: 4rem;
+            }
         }
     }
 }
@@ -68,6 +70,10 @@
         @include bp(md){
             left: auto;
             right: 0;
+        }
+
+        @include bp(sm){
+            right: -6.2rem;
         }
     }
 
@@ -150,20 +156,22 @@
         }
     }
 
+    @include bp(sm){
+        top: 6.4rem;
+    }
+
     &-list{
         &__item{
-            margin: 0 1.83rem;
+            &:not(:last-child){
+                margin-right: 3.65rem;
 
-            @include bp(lg){
-                margin: 0 1.7rem;
-            }
+                @include bp(lg){
+                    margin-right: 3rem;
+                }
 
-            @include bp(md){
-                margin: 0 0 1rem;
-            }
-
-            &:first-of-type{
-                margin-left: 0;
+                 @include bp(md){
+                    margin: 0 0 1.5rem;
+                }
             }
         }
         &__link{

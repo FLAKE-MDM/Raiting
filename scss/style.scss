@@ -138,6 +138,11 @@ body{
                 display: block!important;
             }
         }
+        &-none{
+            @include bp(lg-up){
+                display: none!important;
+            }
+        }
         &-flex{
             @include bp(lg-up){
                 display: flex!important;
@@ -158,15 +163,37 @@ body{
 }
 
 .grid{
+    &-2{
+        display: grid;
+        grid-gap: 2.4rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     &-md-2{
         @include bp(md-up){
             display: grid;
-            grid-gap: 0.9rem 3rem;
+            grid-gap: 2.4rem;
             grid-template-columns: repeat(2, 1fr);
         }
     }
 
+    &-md-4{
+        @include bp(md-up){
+            display: grid;
+            grid-gap: 2.4rem;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
     &-lg{
+        &-2{
+            @include bp(lg-up){
+                display: grid;
+                grid-gap: 2.4rem;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         &-3{
             @include bp(lg-up){
                 display: grid;
@@ -176,43 +203,64 @@ body{
         }
     }
 
-    &_xl{
+    &_large{
         @include bp(xl-up){
             grid-gap: 4rem;
         }
     }
+
+    &_large-xl{
+        @include bp(xl-up){
+            grid-gap: 6rem;
+        }
+    }
+
+    &_large-xxl{
+        @include bp(xl-up){
+            grid-gap: 7.6rem;
+        }
+    }
 }
 
-
 // breadcrumb
-// .breadcrumb{
-//     margin: 3.2rem 0 1.4rem;
-//     font-size: 1.2rem;
-//     line-height: 2.8rem;
-//     display: flex;
-//     flex-wrap: wrap;
-//     position: relative;
-//     z-index: 2;
-//     @include bp(md){
-//         font-size: 1rem;
-//         line-height: 1.2rem;
-//         margin: 1.7rem 0 0.5rem;
-//     }
-//     &__item{
-//         margin-bottom: 1rem;
-//     }
-//     &__item+&__item{
-//         &:before{
-//             content: '–';
-//             color: #000;
-//             display: inline-block;
-//             margin: 0 0.7rem;
-//             @include bp(md){
-//                 margin: 0 0.55rem;
-//             }
-//         }
-//     }
-// }
+.breadcrumb{
+    margin: 0 0 1.9rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include bp(md){
+        font-size: 1rem;
+        line-height: 1.2rem;
+        margin: 1.7rem 0 0.5rem;
+    }
+
+    &_md{
+        margin-bottom: 0.9rem;
+    }
+
+    &__item{
+        margin-bottom: 1rem;
+    }
+
+    &__item+&__item{
+        &:before{
+            content: '';
+            background: $black;
+            height: 1rem;
+            width: 0.1rem;
+            display: inline-block;
+            margin: 0 1.2rem;
+
+            @include bp(md){
+                margin: 0 0.55rem;
+            }
+        }
+    }
+
+    &__link{
+        color: #828282;
+    }
+}
 
 // pagination
 // .pagination{
@@ -304,6 +352,11 @@ body{
 .icon-mark{
     flex-shrink: 0;
     width: 3rem;
+
+    &_md{
+        width: 1.8rem;
+        height: 1.8rem;
+    }
 }
 
 // lists
@@ -328,6 +381,14 @@ body{
             top: 0;
             bottom: 0;
             margin: auto 0;
+        }
+    }
+
+    &_md{
+        .dots-list__item{
+            &:not(:last-child){
+                margin-bottom: 1.9rem;
+            }
         }
     }
 }
@@ -366,6 +427,31 @@ body{
             font-weight: bold;
             color: #fff;
             position: absolute;
+        }
+    }
+}
+
+.check-list{
+    &__item{
+        position: relative;
+        padding-left: 2.8rem;
+
+        &:not(:last-child){
+            margin-bottom: 0.8rem;
+        }
+
+        &:before{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 1.4rem;
+            height: 1.4rem;
+            background: url(../img/icons/check-primary.svg) 0 0 no-repeat;
+            background-size: contain;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
         }
     }
 }
@@ -465,11 +551,46 @@ body{
     }
 }
 
+.flag{
+    margin: -0.4rem 0 0 1.6rem;
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+// info-section
+.info-section{
+    margin-top: 3.5rem;
+    padding-bottom: 0.2rem;
+
+    &__content{
+        display: grid;
+        grid-gap: 2.4rem;
+        grid-template-columns: 44% 52%;
+
+        @include bp(md){
+            margin-bottom: 2rem;
+        }
+
+        @include bp(sm){
+            grid-template-columns: 100%;
+        }
+    }
+
+    &__title{
+        margin-bottom: 1.2rem;
+    }
+
+    p{
+        margin-bottom: 0.75rem;
+    }
+}
+
 
 @import 'form';
 @import 'header';
 @import 'home';
 @import 'footer';
+@import 'error';
 
 
 

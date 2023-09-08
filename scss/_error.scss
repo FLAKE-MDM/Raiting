@@ -1,0 +1,29 @@
+.error-section{
+  margin: 4.2rem auto;
+  min-height: 24.9rem;
+  background: url(../img/error-bg.svg) 50% 0 no-repeat;
+  padding: 3.7rem 7%;
+  max-width: 105rem;
+
+  @include bp(md){
+    background-size: 100% auto;
+  }
+
+  @include bp(sm){
+    margin: 0 0 4rem;
+    padding: 0;
+  }
+
+  &__title{
+    font: 800 14.4rem/140% 'Alegreya Sans', sans-serif;
+    margin-bottom: 0.2rem;
+
+    @include bp(sm){
+      line-height: 100%;
+    }
+  }
+
+  .title{
+    margin: 0 0 2.3rem;
+  }
+}

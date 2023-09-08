@@ -90,10 +90,10 @@ p{
     }
 
     &-xl{
-        margin-top: 5.9rem;
+        margin-top: 5.9rem!important;
 
         @include bp(sm){
-            margin-top: 4rem;
+            margin-top: 4rem!important;
         }
     }
 
@@ -130,6 +130,14 @@ p{
             margin-bottom: 2rem;
         }
     }
+
+    &-xl{
+        margin-bottom: 4.6rem!important;
+
+        @include bp(md){
+            margin-bottom: 2rem!important;
+        }
+    }
 }
 
 .ms{
@@ -148,7 +156,7 @@ p{
     }
 
     &-2{
-        margin-right: 2rem;
+        margin-right: 2rem!important;
     }
 }
 

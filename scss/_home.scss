@@ -19,10 +19,6 @@
     }
   }
 
-  &__text{
-
-  }
-
   &__image{
     @include bp(md){
       display: flex;
@@ -42,6 +38,14 @@
   @include bp(sm){
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  &_margin{
+    margin: 3rem 0;
+
+    &_md{
+      margin: 2.6rem 0 3.4rem;
+    }
   }
 
   &__item+&__item{
@@ -66,6 +70,22 @@
       }
     }
   }
+
+  &__text{
+    margin-top: 1rem;
+
+    p{
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  .author{
+    margin-right: 4rem;
+
+    @include bp(sm){
+      margin-right: 0;
+    }
+  }
 }
 
 // top section
@@ -83,10 +103,21 @@
     img{
       border-radius: 1rem;
     }
+
+    &_md{
+
+      img{
+        border-radius: 2rem;
+      }
+    }
   }
 
   &__name {
     margin-bottom: 0.2rem;
+
+    &_md{
+      margin: 0.6rem 0 0;
+    }
   }
 }
 
