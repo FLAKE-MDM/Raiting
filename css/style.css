@@ -269,14 +269,15 @@ input:hover::-webkit-inner-spin-button {
   position: relative;
   padding-right: 2.2rem;
 }
-.dropdown-toggle::after {
+.dropdown-toggle__after {
   content: "";
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 1.3rem;
   height: 1.3rem;
   top: 0;
   right: -0.2rem;
-  background: url(../img/icons/caret-nav.svg) no-repeat;
   background-size: contain;
   transition: all 0.3s ease-out;
   position: absolute;
@@ -362,7 +363,6 @@ input:hover::-webkit-inner-spin-button {
 .icon-check {
   width: 1.5rem;
   height: 1.3rem;
-  background-image: url(../img/icons/check.svg);
 }
 
 .icon-star {
@@ -387,13 +387,11 @@ input:hover::-webkit-inner-spin-button {
 .icon-quote {
   width: 3.2rem;
   height: 3.2rem;
-  background-image: url(../img/icons/quote.svg);
 }
 
 .icon-book {
   width: 4.4rem;
   height: 4.4rem;
-  background-image: url(../img/icons/book.svg);
 }
 
 .icon-facebook {
@@ -1142,14 +1140,12 @@ body.menu-open {
 .check-list__item:not(:last-child) {
   margin-bottom: 0.8rem;
 }
-.check-list__item:before {
+.check-list__icon {
   content: "";
   display: block;
   position: absolute;
   width: 1.4rem;
   height: 1.4rem;
-  background: url(../img/icons/check-primary.svg) 0 0 no-repeat;
-  background-size: contain;
   left: 0;
   top: 0;
   bottom: 0;
@@ -2148,6 +2144,9 @@ body.menu-open {
 }
 .popular-item__image {
   margin-bottom: 2rem;
+}
+.popular-item__image img {
+  fill: red !important;
 }
 
 .reviews {

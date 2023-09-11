@@ -460,20 +460,18 @@ body{
         &:not(:last-child){
             margin-bottom: 0.8rem;
         }
+    }
 
-        &:before{
-            content: '';
-            display: block;
-            position: absolute;
-            width: 1.4rem;
-            height: 1.4rem;
-            background: url(../img/icons/check-primary.svg) 0 0 no-repeat;
-            background-size: contain;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            margin: auto 0;
-        }
+    &__icon{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 1.4rem;
+        height: 1.4rem;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
     }
 }
 

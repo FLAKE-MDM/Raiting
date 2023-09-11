@@ -486,6 +486,10 @@
 
     &__image{
       margin-bottom: 2rem;
+
+      img{
+        fill: red!important;
+      }
     }
   }
 }
